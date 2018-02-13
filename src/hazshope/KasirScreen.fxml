@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="paneKasir" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.KasirScreenController">
+   <children>
+      <Pane layoutX="992.0" layoutY="22.0" prefHeight="380.0" prefWidth="348.0" style="-fx-border-width: 2px; -fx-border-color: #494949;">
+         <children>
+            <JFXTextField fx:id="inputId" focusColor="#08c5ff" labelFloat="true" layoutX="27.0" layoutY="35.0" prefHeight="34.0" prefWidth="179.0" promptText="ID Barang">
+               <font>
+                  <Font name="DIN-Medium" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="inputQuantity" focusColor="#08c5ff" labelFloat="true" layoutX="218.0" layoutY="35.0" prefHeight="34.0" prefWidth="100.0" promptText="Quantity">
+               <font>
+                  <Font name="DIN-Medium" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btTambah" layoutX="222.0" layoutY="302.0" onAction="#tambahBarang" prefHeight="45.0" prefWidth="100.0" style="-fx-background-color: #08c5ff;" text="TAMBAH" textFill="WHITE">
+               <font>
+                  <Font name="DIN-Medium" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btHapus" layoutX="110.0" layoutY="302.0" onAction="#hapusBarang" prefHeight="45.0" prefWidth="100.0" style="-fx-background-color: #ef5d5e;" text="HAPUS" textFill="WHITE">
+               <font>
+                  <Font name="DIN-Medium" size="18.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="27.0" layoutY="144.0" text="Nama    :" textFill="#494949">
+               <font>
+                  <Font name="DIN-Medium" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="210.0" text="Harga   :" textFill="#494949">
+               <font>
+                  <Font name="DIN-Medium" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="243.0" text="Stok      :" textFill="#494949">
+               <font>
+                  <Font name="DIN-Medium" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="111.0" text="Id           :" textFill="#494949">
+               <font>
+                  <Font name="DIN-Medium" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelBarangId" layoutX="121.0" layoutY="115.0" text="456789" textFill="#494949">
+               <font>
+                  <Font name="DIN-Medium" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelBarangStok" layoutX="121.0" layoutY="247.0" text="60" textFill="#494949">
+               <font>
+                  <Font name="DIN-Medium" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelBarangHarga" layoutX="119.0" layoutY="214.0" text="450000" textFill="#494949">
+               <font>
+                  <Font name="DIN-Medium" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelBarangNama" alignment="TOP_LEFT" layoutX="120.0" layoutY="148.0" lineSpacing="7.0" prefHeight="63.0" prefWidth="220.0" text="Sennheiser MX 175" textFill="#494949" wrapText="true">
+               <font>
+                  <Font name="DIN-Medium" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="warningQuantity" layoutX="312.0" layoutY="30.0" prefHeight="45.0" prefWidth="21.0" text="!" textFill="#ef5d5e">
+               <font>
+                  <Font name="DIN-Medium" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="warningId" layoutX="200.0" layoutY="30.0" prefHeight="45.0" prefWidth="21.0" text="!" textFill="#ef5d5e">
+               <font>
+                  <Font name="DIN-Medium" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="381.0" layoutY="23.0" prefHeight="172.0" prefWidth="592.0" style="-fx-border-color: #494949; -fx-border-width: 2px; -fx-background-color: white;">
+         <children>
+            <Label layoutX="24.0" layoutY="8.0" text="TOTAL" textFill="#494949">
+               <font>
+                  <Font name="DIN-Medium" size="59.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelTotalHarga" alignment="TOP_RIGHT" layoutX="263.0" layoutY="14.0" prefHeight="63.0" prefWidth="308.0" text="0" textFill="#08c5ff">
+               <font>
+                  <Font name="DIN-Medium" size="38.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_RIGHT" layoutX="225.0" layoutY="14.0" prefHeight="63.0" prefWidth="76.0" text="Rp." textFill="#08c5ff">
+               <font>
+                  <Font name="DIN-Medium" size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="324.0" layoutY="77.0" prefHeight="34.0" prefWidth="64.0" text="PPN">
+               <font>
+                  <Font name="DIN-Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="324.0" layoutY="100.0" prefHeight="34.0" prefWidth="64.0" text="Bayar">
+               <font>
+                  <Font name="DIN-Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="324.0" layoutY="124.0" prefHeight="34.0" prefWidth="75.0" text="kembalian">
+               <font>
+                  <Font name="DIN-Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSubmitKembalian" alignment="CENTER_RIGHT" layoutX="446.0" layoutY="124.0" prefHeight="34.0" prefWidth="119.0" text="0" textFill="#08c5ff">
+               <font>
+                  <Font name="DIN-Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSubmitBayar" alignment="CENTER_RIGHT" layoutX="446.0" layoutY="100.0" prefHeight="34.0" prefWidth="119.0" text="0" textFill="#08c5ff">
+               <font>
+                  <Font name="DIN-Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSubmitPPN" alignment="CENTER_RIGHT" layoutX="446.0" layoutY="77.0" prefHeight="34.0" prefWidth="119.0" text="0" textFill="#08c5ff">
+               <font>
+                  <Font name="DIN-Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="418.0" layoutY="124.0" prefHeight="34.0" prefWidth="75.0" text="Rp." textFill="#08c5ff">
+               <font>
+                  <Font name="DIN-Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="418.0" layoutY="100.0" prefHeight="34.0" prefWidth="64.0" text="Rp." textFill="#08c5ff">
+               <font>
+                  <Font name="DIN-Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="418.0" layoutY="77.0" prefHeight="34.0" prefWidth="64.0" text="Rp." textFill="#08c5ff">
+               <font>
+                  <Font name="DIN-Medium" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXTreeTableView fx:id="tabelPenjualan" layoutX="123.0" layoutY="212.0" prefHeight="493.0" prefWidth="850.0" style="-fx-border-color: #494949; -fx-border-width: 2px;" stylesheets="@stylesheet/JFXTreeTable.css" />
+      <JFXButton fx:id="btBackHome" onAction="#backToHome" prefHeight="73.0" prefWidth="91.0" text="&lt;">
+         <font>
+            <Font name="DIN-Medium" size="36.0" />
+         </font>
+      </JFXButton>
+      <Pane layoutX="992.0" layoutY="420.0" prefHeight="285.0" prefWidth="348.0" style="-fx-border-width: 2px; -fx-border-color: #494949;">
+         <children>
+            <JFXTextField fx:id="tfBayar" alignment="CENTER_RIGHT" focusColor="#08c5ff" labelFloat="true" layoutX="35.0" layoutY="36.0" prefHeight="34.0" prefWidth="279.0" promptText="bayar ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btSubmit" layoutX="223.0" layoutY="212.0" onAction="#submitPembayaran" prefHeight="45.0" prefWidth="91.0" style="-fx-background-color: #08c5ff;" text="SUMBIT" textFill="WHITE">
+               <font>
+                  <Font name="DIN-Medium" size="18.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="labelSubmitNotValid" layoutX="35.0" layoutY="80.0" prefHeight="26.0" prefWidth="279.0" text="uang tidak mencukupi" textFill="#ef5d5e">
+               <font>
+                  <Font name="DIN-Medium" size="14.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <Label layoutX="123.0" layoutY="28.0" />
+      <Label layoutX="123.0" layoutY="36.0" text="Employee   :">
+         <font>
+            <Font name="DIN-Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="122.0" layoutY="64.0" prefHeight="18.0" prefWidth="100.0" text="ID                  :">
+         <font>
+            <Font name="DIN-Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="122.0" layoutY="90.0" prefHeight="18.0" prefWidth="100.0" text="Date              :">
+         <font>
+            <Font name="DIN-Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDate" layoutX="214.0" layoutY="91.0" prefHeight="18.0" prefWidth="100.0" text="Date">
+         <font>
+            <Font name="DIN-Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelEmpId" layoutX="214.0" layoutY="65.0" prefHeight="18.0" prefWidth="100.0" text="3411161149">
+         <font>
+            <Font name="DIN-Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelEmpName" layoutX="215.0" layoutY="37.0" text="Fladio Armandika">
+         <font>
+            <Font name="DIN-Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelHour" layoutX="214.0" layoutY="116.0" prefHeight="18.0" prefWidth="100.0" text="Date">
+         <font>
+            <Font name="DIN-Medium" size="14.0" />
+         </font>
+      </Label>
+      <StackPane fx:id="stackpaneKasir" prefHeight="768.0" prefWidth="1366.0" visible="false" />
+   </children>
+</Pane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DataBarangScreenController">
+   <children>
+      <JFXTreeTableView fx:id="treeTabel" layoutX="23.0" layoutY="66.0" prefHeight="614.0" prefWidth="697.0" style="-fx-border-color: gray; -fx-border-width: 2px;" stylesheets="@stylesheet/JFXTreeTable.css" />
+      <Pane layoutX="735.0" layoutY="152.0" prefHeight="293.0" prefWidth="322.0" style="-fx-border-color: gray; -fx-border-width: 2px;">
+         <children>
+            <JFXButton fx:id="btTambahItem" layoutX="219.0" layoutY="217.0" onAction="#tambahItem" prefHeight="39.0" prefWidth="82.0" style="-fx-background-color: #08c5ff;" text="tambah" textFill="WHITE">
+               <font>
+                  <Font name="DIN-Medium" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="tfIdBarang" focusColor="#08c5ff" labelFloat="true" layoutX="21.0" layoutY="33.0" prefHeight="27.0" prefWidth="280.0" promptText="id">
+               <font>
+                  <Font name="Trebuchet MS" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tfNamaBarang" focusColor="#08c5ff" labelFloat="true" layoutX="21.0" layoutY="94.0" prefHeight="27.0" prefWidth="280.0" promptText="Nama Barang">
+               <font>
+                  <Font name="Trebuchet MS" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tfHargaBeli" focusColor="#08c5ff" labelFloat="true" layoutX="23.0" layoutY="160.0" prefHeight="27.0" prefWidth="104.0" promptText="Harga Beli">
+               <font>
+                  <Font name="Trebuchet MS" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tfHargaJual" focusColor="#08c5ff" labelFloat="true" layoutX="137.0" layoutY="160.0" prefHeight="27.0" prefWidth="104.0" promptText="Harga Jual">
+               <font>
+                  <Font name="Trebuchet MS" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tfStok" focusColor="#08c5ff" labelFloat="true" layoutX="251.0" layoutY="160.0" prefHeight="27.0" prefWidth="47.0" promptText="Stok">
+               <font>
+                  <Font name="Trebuchet MS" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btBersih" layoutX="127.0" layoutY="217.0" onAction="#clearTextField" prefHeight="39.0" prefWidth="82.0" style="-fx-background-color: #08c5ff;" text="bersih" textFill="WHITE">
+               <font>
+                  <Font name="DIN-Medium" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="735.0" layoutY="66.0" prefHeight="63.0" prefWidth="322.0" style="-fx-border-color: gray; -fx-border-width: 2px;">
+         <children>
+            <JFXTextField focusColor="#08c5ff" layoutX="21.0" layoutY="19.0" prefHeight="25.0" prefWidth="280.0" promptText="search">
+               <font>
+                  <Font name="Trebuchet MS" size="15.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btBacktoHome" layoutX="7.0" layoutY="6.0" onAction="#backToHome" prefHeight="57.0" prefWidth="64.0" text="&lt;" textFill="GREY">
+         <font>
+            <Font name="DIN-Medium" size="27.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="460.0" layoutY="19.0" text="DATA BARANG" textFill="GREY">
+         <font>
+            <Font name="DIN-Medium" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btHapus" layoutX="939.0" layoutY="455.0" onAction="#hapusItem" prefHeight="51.0" prefWidth="118.0" style="-fx-background-color: #ef5d5e;" text="hapus" textFill="WHITE">
+         <font>
+            <Font name="DIN-Medium" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</Pane>

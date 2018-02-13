@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane  fx:id="paneLoginScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginScreenController">
+   <children>
+      <Label layoutX="221.0" layoutY="180.0" text="HAZSHOPE">
+         <font>
+            <Font name="Champagne &amp; Limousines Bold" size="140.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="tfUsername" focusColor="#08c5ff" layoutX="373.0" layoutY="410.0" prefHeight="25.0" prefWidth="335.0" promptText="username">
+         <font>
+            <Font name="DIN-Medium" size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="tfPassword" focusColor="#08c5ff" layoutX="373.0" layoutY="476.0" prefHeight="25.0" prefWidth="335.0" promptText="password">
+         <font>
+            <Font name="DIN-Medium" size="24.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="btLogin" layoutX="636.0" layoutY="546.0" onAction="#makeLogin" prefHeight="50.0" prefWidth="72.0" text="Login" textAlignment="RIGHT" textFill="#494949">
+         <font>
+            <Font name="DIN-MediumAlternate" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="labelLoginNotValid" layoutX="373.0" layoutY="526.0" text="username atau password salah" textFill="#ef5d5e">
+         <font>
+            <Font name="DIN-Medium" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

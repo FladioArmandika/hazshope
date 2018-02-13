@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity"  minHeight="-Infinity" minWidth="-Infinity" prefHeight="171.0" prefWidth="273.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainScreenController">
+   <children>
+      <JFXButton fx:id="btOkDialog" layoutX="97.0" layoutY="108.0" prefHeight="36.0" prefWidth="80.0" style="-fx-background-color: #08c5ff;" text="OK" textFill="WHITE">
+         <font>
+            <Font name="DIN-Medium" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="-14.0" layoutY="44.0" prefHeight="17.0" prefWidth="301.0" text="Transaksi Berhasil" textFill="#494949">
+         <font>
+            <Font name="DIN-Medium" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

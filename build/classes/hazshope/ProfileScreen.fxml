@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:controller="Controller.ProfileScreenController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton fx:id="btBackHome" layoutX="10.0" layoutY="10.0" prefHeight="73.0" prefWidth="91.0" text="&lt;">
+         <font>
+            <Font name="DIN-Medium" size="36.0" />
+         </font>
+      </JFXButton>
+      <Pane layoutX="94.0" layoutY="22.0" prefHeight="683.0" prefWidth="595.0" style="-fx-border-color: #494949; -fx-border-width: 2px;">
+         <children>
+            <Label fx:id="labelId" layoutX="190.0" layoutY="20.0" prefHeight="24.0" prefWidth="246.0" text="ID">
+               <font>
+                  <Font name="DIN-Medium" size="16.0" />
+               </font></Label>
+            <Label fx:id="labelNama" layoutX="190.0" layoutY="44.0" prefHeight="24.0" prefWidth="246.0" text="Nama">
+               <font>
+                  <Font name="DIN-Medium" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelJabatan" layoutX="190.0" layoutY="68.0" prefHeight="24.0" prefWidth="246.0" text="Jabatan">
+               <font>
+                  <Font name="DIN-Medium" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelGolongan" layoutX="190.0" layoutY="92.0" prefHeight="24.0" prefWidth="246.0" text="Golongan">
+               <font>
+                  <Font name="DIN-Medium" size="16.0" />
+               </font>
+            </Label>
+            <Pane layoutX="22.0" layoutY="20.0" prefHeight="138.0" prefWidth="141.0" style="-fx-background-color: #494949;" />
+            <TextArea fx:id="tfAlamat" editable="false" layoutX="99.0" layoutY="230.0" prefHeight="122.0" prefWidth="474.0" />
+            <Label layoutX="22.0" layoutY="230.0" prefHeight="24.0" prefWidth="141.0" text="Alamat">
+               <font>
+                  <Font name="DIN-Medium" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="484.0" prefHeight="24.0" prefWidth="141.0" text="Email">
+               <font>
+                  <Font name="DIN-Medium" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfEmail" editable="false" layoutX="99.0" layoutY="484.0" prefHeight="25.0" prefWidth="301.0" />
+            <Label layoutX="22.0" layoutY="442.0" prefHeight="24.0" prefWidth="141.0" text="No Hp">
+               <font>
+                  <Font name="DIN-Medium" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNoHp" editable="false" layoutX="99.0" layoutY="442.0" prefHeight="25.0" prefWidth="186.0" />
+            <Label layoutX="304.0" layoutY="442.0" prefHeight="24.0" prefWidth="141.0" text="No.Telp">
+               <font>
+                  <Font name="DIN-Medium" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNoTelp" editable="false" layoutX="388.0" layoutY="442.0" prefHeight="25.0" prefWidth="186.0" />
+            <Label layoutX="22.0" layoutY="362.0" prefHeight="24.0" prefWidth="141.0" text="Kota">
+               <font>
+                  <Font name="DIN-Medium" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfEmail1" editable="false" layoutX="99.0" layoutY="362.0" prefHeight="25.0" prefWidth="186.0" />
+            <Label layoutX="22.0" layoutY="402.0" prefHeight="24.0" prefWidth="141.0" text="Provinsi">
+               <font>
+                  <Font name="DIN-Medium" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfEmail11" editable="false" layoutX="99.0" layoutY="402.0" prefHeight="25.0" prefWidth="186.0" />
+            <Label layoutX="300.0" layoutY="363.0" prefHeight="24.0" prefWidth="74.0" text="Kode Pos">
+               <font>
+                  <Font name="DIN-Medium" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfEmail111" editable="false" layoutX="388.0" layoutY="363.0" prefHeight="25.0" prefWidth="186.0" />
+         </children></Pane>
+      <JFXTreeTableView layoutX="719.0" layoutY="63.0" prefHeight="384.0" prefWidth="438.0" style="-fx-border-color: #494949; -fx-border-width: 2px;" stylesheets="@stylesheet/JFXTreeTable.css" />
+      <JFXDatePicker defaultColor="#08c5ff" layoutX="986.0" layoutY="22.0" />
+      <Label layoutX="719.0" layoutY="22.0" text="Riwayat Transaksi" textFill="#08c5ff">
+         <font>
+            <Font name="DIN-Medium" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

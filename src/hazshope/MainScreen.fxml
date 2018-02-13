@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1080.0" style="-fx-background-color: #E7E7E7;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainScreenController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1080.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../res/img/mainscreen1.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="btKasir" layoutX="70.0" layoutY="311.0" onMouseClicked="#handleButtonKasir" prefHeight="303.0" prefWidth="303.0">
+         <children>
+            <Pane fx:id="ripplerKasir" prefHeight="303.0" prefWidth="303.0" />
+         </children></Pane>
+      <Pane fx:id="btDataKeuangan" layoutX="389.0" layoutY="311.0" prefHeight="303.0" prefWidth="303.0">
+         <children>
+            <Pane fx:id="ripplerDataKeuangan" prefHeight="303.0" prefWidth="303.0" />
+         </children></Pane>
+      <Pane fx:id="btDataBarang" layoutX="712.0" layoutY="311.0" onMouseClicked="#handleButtonDataBarang" prefHeight="303.0" prefWidth="303.0">
+         <children>
+            <Pane fx:id="ripplerDataBarang" prefHeight="303.0" prefWidth="303.0" />
+         </children></Pane>
+      <ImageView fx:id="circleImg" fitHeight="166.0" fitWidth="166.0" layoutX="123.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="labelId" layoutX="309.0" layoutY="109.0" text="ID" textFill="#494949">
+         <font>
+            <Font name="DIN-Medium" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelNama" layoutX="309.0" layoutY="135.0" text="NAME" textFill="#494949">
+         <font>
+            <Font name="DIN-Medium" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPosition" layoutX="309.0" layoutY="161.0" text="POSITION" textFill="#494949">
+         <font>
+            <Font name="DIN-Medium" size="20.0" />
+         </font>
+      </Label>
+      <Pane fx:id="btLogOut" layoutX="403.0" layoutY="193.0" onMouseClicked="#LogOut" prefHeight="35.0" prefWidth="88.0" />
+      <Pane fx:id="btProfil" layoutX="309.0" layoutY="193.0" onMouseClicked="#goToProfil" prefHeight="35.0" prefWidth="88.0" />
+   </children>
+</Pane>
